@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   return runApp(
@@ -36,23 +37,22 @@ class _DicePageState extends State<DicePage> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Expanded(
-            child: FlatButton(
-              child: Image.asset('images/dice$leftDiceNumber.png'),
-              onPressed: () {
-                print('Left button is pressed');
-                setState(() {
-                  leftDiceNumber = 1;
-                });
-              },
-            ),
-          ),
+              child: FlatButton(
+            child: Image.asset('images/dice$leftDiceNumber.png'),
+            onPressed: () {
+              print('Left button is pressed');
+              setState(() {
+                leftDiceNumber = Random().nextInt(5) + 1;
+              });
+            },
+          )),
           Expanded(
             child: FlatButton(
               child: Image.asset('images/dice$rightDiceNumber.png'),
               onPressed: () {
                 print('Right button is pressed');
                 setState(() {
-                  rightDiceNumber = 1;
+                  rightDiceNumber = Random().nextInt(5) + 1;
                 });
               },
             ),
