@@ -43,6 +43,7 @@ class _DicePageState extends State<DicePage> {
               print('Left button is pressed');
               setState(() {
                 leftDiceNumber = Random().nextInt(5) + 1;
+                rightDiceNumber = Random().nextInt(5) + 1;
               });
             },
           )),
@@ -53,6 +54,7 @@ class _DicePageState extends State<DicePage> {
                 print('Right button is pressed');
                 setState(() {
                   rightDiceNumber = Random().nextInt(5) + 1;
+                  leftDiceNumber = Random().nextInt(5) + 1;
                 });
               },
             ),
