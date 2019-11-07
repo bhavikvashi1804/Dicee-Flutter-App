@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Nov 07 18:21:05 IST 2019
+#Thu Nov 07 18:27:40 IST 2019
 17.baseType=DIRECTORY
 4.path=flutter_assets/images/dice4.png
 8.set=ASSET
